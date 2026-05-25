@@ -1,59 +1,422 @@
-# CarteiraTrading
+# 📈 Trading App (Angular)
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 21.2.11.
+A modern single-page trading dashboard built with Angular, designed to simulate a simplified financial trading platform. The application demonstrates frontend architecture, market data integration, authentication, portfolio management, and database persistence using Supabase.
 
-## Development server
+This project was developed for educational and demonstration purposes, focusing on scalable Angular architecture, service-oriented design, and third-party API integrations.
 
-To start a local development server, run:
+---
+
+## 📖 Overview
+
+The Trading App provides users with a simulated trading experience where they can:
+
+- Monitor market information
+- Manage investment portfolios
+- Track stocks through watchlists
+- Simulate trade/order functionality
+- Receive notifications
+- Authenticate users securely
+- Persist data through Supabase
+
+The project emphasizes modular frontend architecture, reusable services, and clean Angular development practices.
+
+---
+
+## ✨ Features
+
+### 📊 Dashboard
+- Portfolio overview
+- Market summary
+- Real-time or near real-time stock information
+- Quick statistics and insights
+
+### 💹 Market Data
+- Integration with **Finnhub API**
+- Stock price tracking
+- Market data fetching service
+- Configurable market-data provider architecture
+
+### 💼 Portfolio Management
+- Portfolio tracking
+- Asset overview
+- Holdings management
+- Order scaffolding for future trading implementation
+
+### ⭐ Watchlist
+- Save favorite stocks
+- Quick access to tracked assets
+- Persistent user watchlists
+
+### 🔔 Notifications
+- User notifications service
+- Trading and portfolio-related alerts
+- Extendable event system
+
+### 🔐 Authentication
+- Login and authentication service
+- Route guards
+- Protected pages
+- Supabase authentication integration
+
+### 🗄️ Database Integration
+- Supabase backend support
+- PostgreSQL database
+- SQL schema and seed files included
+
+---
+
+## 🛠️ Tech Stack
+
+### Frontend
+- **Angular 21**
+- **TypeScript**
+- HTML5
+- CSS3
+
+### Backend / Persistence
+- **Supabase**
+- PostgreSQL
+
+### APIs
+- **Finnhub API** (Market Data Provider)
+
+### Testing
+- **Vitest**
+- Angular testing utilities
+
+### Development Tools
+- Angular CLI
+- Node.js
+- npm
+
+---
+
+## 🏗️ Project Architecture
+
+The project follows a modular Angular structure to separate concerns and improve maintainability.
+
+```txt
+project-root/
+│
+├── src/
+│   ├── app/
+│   │   ├── core/
+│   │   │   ├── services/
+│   │   │   ├── guards/
+│   │   │   └── interceptors/
+│   │   │
+│   │   ├── features/
+│   │   │   ├── dashboard/
+│   │   │   ├── portfolio/
+│   │   │   ├── trade/
+│   │   │   ├── watchlist/
+│   │   │   └── notifications/
+│   │   │
+│   │   ├── shared/
+│   │   └── app.routes.ts
+│   │
+│   ├── environments/
+│   └── main.ts
+│
+├── supabase/
+│   ├── schema.sql
+│   └── seed.sql
+│
+├── public/
+├── angular.json
+├── package.json
+└── README.md
+```
+
+---
+
+## 🚀 Getting Started
+
+### Prerequisites
+
+Before running the project, ensure you have installed:
+
+- Node.js (recommended LTS version)
+- npm
+- Angular CLI
+
+Install Angular CLI globally:
+
+```bash
+npm install -g @angular/cli
+```
+
+Verify installation:
+
+```bash
+ng version
+```
+
+---
+
+## ⚙️ Installation
+
+Clone the repository:
+
+```bash
+git clone <your-repository-url>
+```
+
+Navigate to the project folder:
+
+```bash
+cd Trading-App
+```
+
+Install dependencies:
+
+```bash
+npm install
+```
+
+---
+
+## 🔑 Environment Configuration
+
+Create your environment configuration and provide API credentials.
+
+Example environment variables:
+
+```env
+FINNHUB_API_KEY=your_api_key
+
+SUPABASE_URL=your_supabase_url
+SUPABASE_ANON_KEY=your_supabase_anon_key
+```
+
+### Required Services
+
+#### Finnhub
+Used for market data and stock information.
+
+Create an account and get an API key:
+
+https://finnhub.io/
+
+#### Supabase
+Used for authentication and database persistence.
+
+Create a project:
+
+https://supabase.com/
+
+---
+
+## ▶️ Running the Application
+
+Start the development server:
+
+```bash
+npm start
+```
+
+or
 
 ```bash
 ng serve
 ```
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+Open:
 
-## Code scaffolding
-
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
-
-```bash
-ng generate component component-name
+```txt
+http://localhost:4200
 ```
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+The application automatically reloads whenever source files are modified.
+
+---
+
+## 🧪 Testing
+
+Run unit tests:
 
 ```bash
-ng generate --help
+npm test
 ```
 
-## Building
-
-To build the project run:
-
-```bash
-ng build
-```
-
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Vitest](https://vitest.dev/) test runner, use the following command:
+or
 
 ```bash
 ng test
 ```
 
-## Running end-to-end tests
+The project uses **Vitest** for testing Angular services and components.
 
-For end-to-end (e2e) testing, run:
+Look for test files:
 
-```bash
-ng e2e
+```txt
+*.spec.ts
 ```
 
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
+---
 
-## Additional Resources
+## 🗄️ Database Setup
 
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+The `supabase/` directory contains SQL scripts required to initialize the database.
+
+### Schema
+
+```txt
+supabase/schema.sql
+```
+
+Contains:
+- Database tables
+- Relationships
+- Constraints
+
+### Seed Data
+
+```txt
+supabase/seed.sql
+```
+
+Contains:
+- Sample records
+- Initial test data
+
+Run these scripts inside your Supabase/PostgreSQL instance.
+
+---
+
+## 🔒 Authentication
+
+Authentication is handled using **Supabase Auth**.
+
+Implemented features include:
+
+- Login
+- Session handling
+- Route guards
+- Protected routes
+- Authentication services
+
+Authentication logic can be found inside:
+
+```txt
+src/app/core/services
+```
+
+---
+
+## 📂 Important Project Files
+
+| File | Description |
+|------|-------------|
+| `main.ts` | Angular application entry point |
+| `main.server.ts` | Server-side rendering entry |
+| `server.ts` | Server integration file |
+| `schema.sql` | Database schema |
+| `seed.sql` | Initial database data |
+| `angular.json` | Angular configuration |
+| `package.json` | Dependencies and scripts |
+
+---
+
+## 🧩 Available Scripts
+
+### Development
+
+```bash
+npm start
+```
+
+Runs development server.
+
+### Build
+
+```bash
+npm run build
+```
+
+Builds production assets.
+
+### Test
+
+```bash
+npm test
+```
+
+Runs test suite.
+
+### Angular Generate
+
+Generate components/services:
+
+```bash
+ng generate component component-name
+```
+
+Example:
+
+```bash
+ng generate component dashboard
+```
+
+---
+
+## 📈 Future Improvements
+
+Potential enhancements for the project:
+
+- Real trading simulation
+- Buy/sell order execution
+- Advanced analytics dashboard
+- Portfolio performance charts
+- Dark/light theme support
+- Push notifications
+- WebSocket live market updates
+- E2E testing
+- CI/CD pipeline integration
+
+---
+
+## 🎓 Educational Objectives
+
+This project demonstrates:
+
+- Angular architecture
+- Service-oriented frontend development
+- State and feature modularization
+- Authentication and route guards
+- Third-party API integration
+- Database persistence using Supabase
+- Component-based UI development
+- Testing practices using Vitest
+
+---
+
+## 👨‍🏫 Notes for Instructors
+
+This repository was developed as an academic project to demonstrate:
+
+- Clean Angular architecture
+- Modular frontend development
+- Service abstraction
+- Third-party integrations
+- Authentication flows
+- Database persistence patterns
+- Maintainable and scalable project organization
+
+For a formal academic explanation and evaluation, see:
+
+```txt
+Teacher_Report.md
+```
+
+---
+
+## 📄 License
+
+This project is intended for educational purposes.
+
+---
+
+## 👤 Author
+
+Developed as an educational trading platform project using Angular and Supabase.
