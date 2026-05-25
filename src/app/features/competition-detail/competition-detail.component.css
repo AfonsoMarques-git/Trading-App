@@ -1,0 +1,29 @@
+:host { display: block; }
+.page { display: flex; flex-direction: column; gap: var(--space-6); }
+.breadcrumb { display: flex; align-items: center; gap: var(--space-2); font-size: var(--font-size-xs); color: var(--color-text-muted); }
+.breadcrumb-link { display: flex; align-items: center; gap: var(--space-1); color: var(--color-text-secondary); transition: color var(--transition-fast); }
+.breadcrumb-link:hover { color: var(--color-accent); }
+.page-head { display: flex; flex-direction: column; gap: var(--space-1); }
+.eyebrow { display: inline-block; font-size: var(--font-size-xs); font-weight: var(--font-weight-medium); color: var(--color-accent); text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: var(--space-1); }
+.page-title { font-size: var(--font-size-3xl); font-weight: var(--font-weight-bold); letter-spacing: -0.02em; }
+.page-sub { color: var(--color-text-secondary); font-size: var(--font-size-sm); }
+
+.your-rank-card { display: flex; align-items: center; gap: var(--space-4); background: linear-gradient(135deg, var(--color-accent-soft), transparent); border: 1px solid var(--color-accent); border-radius: var(--radius-lg); padding: var(--space-5); }
+.rank-badge { font-size: var(--font-size-2xl); font-weight: var(--font-weight-bold); min-width: 60px; text-align: center; }
+.rank-1 { color: #fbbf24; }
+.rank-2 { color: #94a3b8; }
+.rank-3 { color: #c2783c; }
+.rank-other { color: var(--color-text-secondary); }
+.your-rank-info { flex: 1; }
+.your-rank-label { font-size: var(--font-size-xs); color: var(--color-text-muted); }
+.your-rank-value { font-size: var(--font-size-sm); font-weight: var(--font-weight-medium); margin-top: var(--space-1); }
+.your-tag { font-size: var(--font-size-xs); background-color: var(--color-accent); color: #fff; padding: 2px 8px; border-radius: var(--radius-sm); font-weight: var(--font-weight-semibold); }
+
+.no-pad { padding: 0 !important; }
+.table-wrap { overflow-x: auto; }
+
+.lb-table tbody tr.is-you { background-color: var(--color-accent-soft); }
+.rank-medal { font-size: var(--font-size-base); }
+.trader-cell { display: flex; align-items: center; gap: var(--space-3); }
+.avatar { width: 28px; height: 28px; border-radius: 50%; background-color: var(--color-bg-elevated); border: 1px solid var(--color-border); display: flex; align-items: center; justify-content: center; font-size: var(--font-size-xs); font-weight: var(--font-weight-semibold); color: var(--color-text-secondary); flex-shrink: 0; }
+.you-badge { font-size: 10px; background-color: var(--color-accent); color: #fff; padding: 1px 5px; border-radius: var(--radius-sm); font-weight: var(--font-weight-semibold); }

@@ -1,0 +1,103 @@
+:host { display: block; }
+
+.page {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: calc(100vh - 120px);
+  padding: var(--space-6);
+}
+
+.onboarding-card {
+  background-color: var(--color-bg-card);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-xl);
+  padding: var(--space-10) var(--space-10);
+  max-width: 520px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-6);
+  text-align: center;
+  box-shadow: var(--shadow-xl);
+}
+
+.progress-dots {
+  display: flex;
+  gap: var(--space-2);
+}
+
+.dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: var(--color-border-strong);
+  transition: background-color var(--transition-fast), transform var(--transition-fast), width var(--transition-fast);
+  border-radius: 4px;
+}
+
+.dot.is-active {
+  background-color: var(--color-accent);
+  width: 24px;
+}
+
+.dot.is-done {
+  background-color: var(--color-accent-green);
+}
+
+.step-body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-4);
+  padding: var(--space-4) 0;
+}
+
+.step-icon-wrap {
+  width: 80px;
+  height: 80px;
+  border-radius: var(--radius-xl);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-accent);
+  margin-bottom: var(--space-2);
+}
+
+.step-title {
+  font-size: var(--font-size-2xl);
+  font-weight: var(--font-weight-bold);
+  letter-spacing: -0.02em;
+}
+
+.step-subtitle {
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-medium);
+  color: var(--color-accent);
+}
+
+.step-body-text {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-secondary);
+  line-height: var(--line-height-relaxed);
+  max-width: 400px;
+}
+
+.step-nav {
+  display: flex;
+  gap: var(--space-3);
+  width: 100%;
+}
+
+.step-nav .btn {
+  flex: 1;
+}
+
+.skip-link {
+  font-size: var(--font-size-xs);
+  color: var(--color-text-muted);
+  transition: color var(--transition-fast);
+}
+
+.skip-link:hover { color: var(--color-text-secondary); }

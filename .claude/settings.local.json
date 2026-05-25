@@ -1,0 +1,8 @@
+{
+  "permissions": {
+    "allow": [
+      "Skill(claude-mem:mem-search)",
+      "mcp__ruflo__memory_search"
+    ]
+  }
+}

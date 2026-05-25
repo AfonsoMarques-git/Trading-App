@@ -1,0 +1,31 @@
+:host { display: block; }
+.page { display: flex; flex-direction: column; gap: var(--space-6); }
+.page-head { display: flex; align-items: flex-end; justify-content: space-between; gap: var(--space-4); flex-wrap: wrap; }
+.eyebrow { display: inline-block; font-size: var(--font-size-xs); font-weight: var(--font-weight-medium); color: var(--color-accent); text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: var(--space-1); }
+.page-title { font-size: var(--font-size-3xl); font-weight: var(--font-weight-bold); letter-spacing: -0.02em; margin-bottom: var(--space-1); }
+.page-sub { color: var(--color-text-secondary); font-size: var(--font-size-sm); }
+
+.comp-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(340px, 1fr)); gap: var(--space-5); }
+
+.comp-card { background-color: var(--color-bg-card); border: 1px solid var(--color-border); border-radius: var(--radius-lg); padding: var(--space-5); display: flex; flex-direction: column; gap: var(--space-4); transition: border-color var(--transition-fast), transform var(--transition-fast); }
+.comp-card:hover { border-color: var(--color-border-strong); transform: translateY(-2px); }
+.status-live { border-color: var(--color-accent-green); }
+.status-live:hover { border-color: var(--color-accent-green); }
+
+.comp-header { display: flex; align-items: center; justify-content: space-between; gap: var(--space-3); }
+
+.comp-status-badge { font-size: var(--font-size-xs); font-weight: var(--font-weight-semibold); padding: 2px 8px; border-radius: var(--radius-sm); }
+.badge-live { background-color: var(--color-accent-green-soft); color: var(--color-accent-green); }
+.badge-upcoming { background-color: var(--color-accent-soft); color: var(--color-accent); }
+.badge-ended { background-color: var(--color-bg-elevated); color: var(--color-text-muted); }
+
+.comp-prize { font-size: var(--font-size-sm); font-weight: var(--font-weight-medium); color: var(--color-text-secondary); }
+
+.comp-title { font-size: var(--font-size-base); font-weight: var(--font-weight-semibold); }
+.comp-desc { font-size: var(--font-size-sm); color: var(--color-text-secondary); line-height: var(--line-height-relaxed); flex: 1; }
+
+.comp-meta { display: flex; flex-direction: column; gap: var(--space-2); }
+.comp-stat { display: flex; align-items: center; gap: var(--space-2); font-size: var(--font-size-xs); color: var(--color-text-muted); }
+
+.comp-actions { display: flex; gap: var(--space-3); }
+.comp-actions .btn { flex: 1; justify-content: center; }

@@ -1,0 +1,149 @@
+:host { display: block; }
+
+.page { display: flex; flex-direction: column; gap: var(--space-6); }
+
+.page-head { display: flex; flex-direction: column; gap: var(--space-1); }
+
+.eyebrow {
+  display: inline-block;
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-medium);
+  color: var(--color-accent);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-bottom: var(--space-1);
+}
+
+.page-title { font-size: var(--font-size-3xl); font-weight: var(--font-weight-bold); letter-spacing: -0.02em; }
+.page-sub { color: var(--color-text-secondary); font-size: var(--font-size-sm); }
+
+.overall-progress {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+}
+
+.progress-bar {
+  flex: 1;
+  height: 8px;
+  background-color: var(--color-bg-elevated);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--color-accent), var(--color-accent-green));
+  border-radius: 4px;
+  transition: width var(--transition-normal);
+}
+
+.progress-label {
+  font-size: var(--font-size-xs);
+  color: var(--color-text-muted);
+  white-space: nowrap;
+}
+
+.cat-section { display: flex; flex-direction: column; gap: var(--space-4); }
+
+.cat-title {
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.badge-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: var(--space-3);
+}
+
+.badge-card {
+  background-color: var(--color-bg-card);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: var(--space-4) var(--space-5);
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-4);
+  position: relative;
+  transition: border-color var(--transition-fast);
+}
+
+.badge-card:not(.is-locked) {
+  border-color: var(--color-accent-green);
+  background-color: var(--color-accent-green-soft);
+}
+
+.badge-card.is-locked { opacity: 0.6; }
+
+.badge-emoji {
+  font-size: 28px;
+  line-height: 1;
+  flex-shrink: 0;
+}
+
+.badge-emoji.grayscale { filter: grayscale(1); }
+
+.badge-info {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+  flex: 1;
+  min-width: 0;
+}
+
+.badge-title {
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-text-primary);
+}
+
+.badge-desc {
+  font-size: var(--font-size-xs);
+  color: var(--color-text-muted);
+}
+
+.badge-progress {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  margin-top: var(--space-2);
+}
+
+.badge-progress-bar {
+  flex: 1;
+  height: 4px;
+  background-color: var(--color-bg-elevated);
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.badge-progress-fill {
+  height: 100%;
+  background-color: var(--color-accent);
+  border-radius: 2px;
+}
+
+.badge-progress-label {
+  font-size: var(--font-size-xs);
+  color: var(--color-text-muted);
+  white-space: nowrap;
+  font-variant-numeric: tabular-nums;
+}
+
+.badge-check {
+  position: absolute;
+  top: var(--space-3);
+  right: var(--space-3);
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: var(--color-accent-green);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

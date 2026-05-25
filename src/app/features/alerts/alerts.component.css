@@ -1,0 +1,81 @@
+:host { display: block; }
+.page { display: flex; flex-direction: column; gap: var(--space-6); }
+.page-head { display: flex; align-items: flex-end; justify-content: space-between; gap: var(--space-4); flex-wrap: wrap; }
+.eyebrow { display: inline-block; font-size: var(--font-size-xs); font-weight: var(--font-weight-medium); color: var(--color-accent); text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: var(--space-1); }
+.page-title { font-size: var(--font-size-3xl); font-weight: var(--font-weight-bold); letter-spacing: -0.02em; margin-bottom: var(--space-1); }
+.page-sub { color: var(--color-text-secondary); font-size: var(--font-size-sm); }
+
+.create-card { display: flex; flex-direction: column; gap: var(--space-4); }
+.card-header { display: flex; align-items: center; justify-content: space-between; }
+.card-title { font-size: var(--font-size-xs); font-weight: var(--font-weight-medium); color: var(--color-text-muted); text-transform: uppercase; letter-spacing: 0.06em; }
+
+.create-form {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr auto;
+  gap: var(--space-4);
+  align-items: end;
+}
+
+.form-field { display: flex; flex-direction: column; gap: var(--space-2); }
+.form-label { font-size: var(--font-size-xs); font-weight: var(--font-weight-medium); color: var(--color-text-secondary); }
+
+.form-input {
+  background-color: var(--color-bg-elevated);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: var(--space-3) var(--space-4);
+  font-size: var(--font-size-sm);
+  color: var(--color-text-primary);
+  font-family: var(--font-sans);
+  transition: border-color var(--transition-fast);
+}
+
+.form-input:focus { outline: none; border-color: var(--color-accent); box-shadow: 0 0 0 3px var(--color-accent-glow); }
+
+.form-select {
+  cursor: pointer;
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%2394a3b8' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right var(--space-3) center;
+  padding-right: var(--space-10);
+}
+
+.form-action { justify-content: flex-end; }
+.form-error { font-size: var(--font-size-xs); color: var(--color-accent-red); }
+
+.alerts-list { display: flex; flex-direction: column; gap: var(--space-2); }
+
+.alert-row {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+  background-color: var(--color-bg-card);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: var(--space-4) var(--space-5);
+  transition: border-color var(--transition-fast);
+}
+
+.alert-row:hover { border-color: var(--color-border-strong); }
+.alert-row.is-inactive { opacity: 0.55; }
+
+.alert-info { display: flex; align-items: center; gap: var(--space-3); flex: 1; flex-wrap: wrap; font-size: var(--font-size-sm); min-width: 0; }
+
+.symbol-tag { font-family: var(--font-mono); font-size: var(--font-size-xs); font-weight: var(--font-weight-semibold); padding: 2px 6px; background-color: var(--color-bg-elevated); border: 1px solid var(--color-border-subtle); border-radius: var(--radius-sm); white-space: nowrap; }
+
+.alert-cond { color: var(--color-text-secondary); }
+.alert-price { font-weight: var(--font-weight-semibold); font-variant-numeric: tabular-nums; }
+.alert-current { font-size: var(--font-size-xs); }
+
+.alert-meta { display: flex; align-items: center; gap: var(--space-3); }
+.alert-date { font-size: var(--font-size-xs); color: var(--color-text-muted); }
+
+.alert-actions { display: flex; align-items: center; gap: var(--space-2); }
+
+.btn-icon { width: 30px; height: 30px; display: flex; align-items: center; justify-content: center; border-radius: var(--radius-md); color: var(--color-text-muted); transition: background-color var(--transition-fast), color var(--transition-fast); }
+.btn-icon:hover { background-color: var(--color-accent-red-soft); color: var(--color-accent-red); }
+.btn-sm { font-size: var(--font-size-xs); padding: var(--space-2) var(--space-3); }
+
+@media (max-width: 800px) { .create-form { grid-template-columns: 1fr 1fr; } .form-action { grid-column: span 2; } }
+@media (max-width: 500px) { .create-form { grid-template-columns: 1fr; } .form-action { grid-column: span 1; } }

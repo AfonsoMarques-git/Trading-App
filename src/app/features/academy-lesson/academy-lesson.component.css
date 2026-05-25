@@ -1,0 +1,35 @@
+:host { display: block; }
+.page { display: flex; flex-direction: column; gap: var(--space-6); max-width: 900px; }
+
+.breadcrumb { display: flex; align-items: center; gap: var(--space-2); font-size: var(--font-size-xs); color: var(--color-text-muted); }
+.breadcrumb-link { display: flex; align-items: center; gap: var(--space-1); color: var(--color-text-secondary); transition: color var(--transition-fast); }
+.breadcrumb-link:hover { color: var(--color-accent); }
+.breadcrumb-sep { color: var(--color-text-muted); }
+.breadcrumb-current { color: var(--color-text-muted); }
+
+.lesson-head { display: flex; flex-direction: column; gap: var(--space-3); }
+.lesson-meta { display: flex; align-items: center; gap: var(--space-3); }
+.lesson-duration { display: flex; align-items: center; gap: var(--space-1); font-size: var(--font-size-xs); color: var(--color-text-muted); }
+.lesson-title { font-size: var(--font-size-3xl); font-weight: var(--font-weight-bold); letter-spacing: -0.02em; }
+
+.lesson-layout { display: grid; grid-template-columns: 1fr 260px; gap: var(--space-6); align-items: start; }
+
+.lesson-body { display: flex; flex-direction: column; gap: var(--space-6); }
+
+.lesson-section { display: flex; flex-direction: column; gap: var(--space-3); }
+.section-heading { font-size: var(--font-size-lg); font-weight: var(--font-weight-semibold); }
+.section-body { font-size: var(--font-size-sm); color: var(--color-text-secondary); line-height: var(--line-height-relaxed); }
+
+.lesson-side { display: flex; flex-direction: column; gap: var(--space-4); position: sticky; top: var(--space-6); }
+
+.takeaways-card { background-color: var(--color-bg-card); border: 1px solid var(--color-border); border-radius: var(--radius-lg); padding: var(--space-5); }
+.takeaways-title { display: flex; align-items: center; gap: var(--space-2); font-size: var(--font-size-sm); font-weight: var(--font-weight-semibold); margin-bottom: var(--space-4); color: var(--color-accent-green); }
+.takeaways-list { display: flex; flex-direction: column; gap: var(--space-3); }
+.takeaway-item { font-size: var(--font-size-xs); color: var(--color-text-secondary); padding-left: var(--space-4); position: relative; line-height: var(--line-height-relaxed); }
+.takeaway-item::before { content: '·'; position: absolute; left: 0; color: var(--color-accent-green); font-weight: bold; }
+
+.practice-card { background: linear-gradient(135deg, var(--color-accent-soft), transparent); border: 1px solid var(--color-accent); border-radius: var(--radius-lg); padding: var(--space-5); display: flex; flex-direction: column; gap: var(--space-3); }
+.practice-title { font-size: var(--font-size-sm); font-weight: var(--font-weight-semibold); }
+.practice-desc { font-size: var(--font-size-xs); color: var(--color-text-secondary); }
+
+@media (max-width: 800px) { .lesson-layout { grid-template-columns: 1fr; } .lesson-side { position: static; } }

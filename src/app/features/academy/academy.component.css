@@ -1,0 +1,26 @@
+:host { display: block; }
+.page { display: flex; flex-direction: column; gap: var(--space-6); }
+.page-head { display: flex; align-items: flex-end; justify-content: space-between; gap: var(--space-4); flex-wrap: wrap; }
+.eyebrow { display: inline-block; font-size: var(--font-size-xs); font-weight: var(--font-weight-medium); color: var(--color-accent); text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: var(--space-1); }
+.page-title { font-size: var(--font-size-3xl); font-weight: var(--font-weight-bold); letter-spacing: -0.02em; margin-bottom: var(--space-1); }
+.page-sub { color: var(--color-text-secondary); font-size: var(--font-size-sm); }
+
+.module-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: var(--space-5); }
+
+.module-card { background-color: var(--color-bg-card); border: 1px solid var(--color-border); border-radius: var(--radius-lg); overflow: hidden; }
+
+.module-header { padding: var(--space-5); border-bottom: 1px solid var(--color-border-subtle); border-left: 4px solid; display: flex; flex-direction: column; gap: var(--space-2); }
+
+.module-level-badge { display: inline-flex; align-items: center; font-size: var(--font-size-xs); font-weight: var(--font-weight-semibold); padding: 2px 8px; border-radius: var(--radius-sm); width: fit-content; }
+
+.module-title { font-size: var(--font-size-base); font-weight: var(--font-weight-semibold); }
+.module-count { font-size: var(--font-size-xs); color: var(--color-text-muted); }
+
+.lesson-list { display: flex; flex-direction: column; }
+
+.lesson-row { display: flex; align-items: center; gap: var(--space-3); padding: var(--space-3) var(--space-5); font-size: var(--font-size-sm); color: var(--color-text-secondary); transition: background-color var(--transition-fast), color var(--transition-fast); }
+.lesson-row:hover { background-color: var(--color-bg-hover); color: var(--color-text-primary); }
+
+.lesson-icon { color: var(--color-text-muted); display: flex; align-items: center; }
+.lesson-title { flex: 1; }
+.lesson-duration { font-size: var(--font-size-xs); color: var(--color-text-muted); white-space: nowrap; }
